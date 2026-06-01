@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Transparent background; bold wordmark for high legibility at small sizes -->
+  <text x="32" y="44" text-anchor="middle" font-size="34" font-family="Segoe UI, Arial, Helvetica, sans-serif" fill="#111" font-weight="800">SQL</text>
+</svg>

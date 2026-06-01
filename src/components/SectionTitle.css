@@ -1,0 +1,39 @@
+.section-title {
+  display: block;
+  text-align: left;
+  margin: 0 0 var(--section-title-gap) 0;
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  line-height: 1.05;
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  text-transform: none;
+  color: rgba(232, 244, 255, 0.97);
+  position: relative;
+  padding-bottom: var(--space-4);
+}
+
+/* Decorative section number prefix via CSS counter */
+.section-title::before {
+  content: "0" counter(portfolio-section);
+  display: block;
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  color: rgba(166, 204, 255, 0.92);
+  margin-bottom: var(--space-2);
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+}
+
+/* Accent underline */
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 36px;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(166, 204, 255, 1), rgba(95, 151, 255, 0.36));
+  border-radius: 2px;
+}

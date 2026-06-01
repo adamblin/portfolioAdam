@@ -1,0 +1,250 @@
+.contact-card {
+  position: relative;
+  background: var(--color-surface-elevated);
+  border: 1px solid rgba(20, 24, 34, 0.12);
+  border-radius: var(--radius-xl);
+  padding: clamp(16px, 2vw, 22px);
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  box-shadow: var(--shadow-xs);
+  align-self: center;
+}
+
+.contact-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  padding-top: 0;
+}
+
+.contact-heading {
+  margin: 0 0 var(--space-2) 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.form-required-note {
+  margin: 0 0 var(--space-3) 0;
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+}
+
+.required-mark {
+  color: var(--color-error);
+  font-weight: 700;
+  margin-left: 1px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-row label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  min-height: 44px;
+  border: 1px solid rgba(15, 15, 15, 0.22);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: inherit;
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  transition: border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+.form-row input:hover,
+.form-row textarea:hover {
+  border-color: rgba(15, 15, 15, 0.42);
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background: var(--color-surface);
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.16);
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(15, 15, 15, 0.12);
+}
+
+.send-button {
+  appearance: none;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  padding: var(--space-3) var(--space-6);
+  min-height: 44px;
+  background: var(--color-primary);
+  color: white;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  letter-spacing: 0.01em;
+  box-shadow: none;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.send-button:hover {
+  transform: translateY(-2px);
+  background: var(--color-primary-dark);
+}
+
+.send-button:active {
+  transform: translateY(0);
+}
+
+.send-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.send-button.is-loading {
+  background: var(--color-primary-dark);
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  border: 1px solid rgba(15, 15, 15, 0.22);
+  padding: var(--space-2) var(--space-4);
+  min-height: 44px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  background: transparent;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease, transform 150ms ease;
+}
+
+.social-button:hover {
+  background: var(--color-surface-alt);
+  transform: translateY(-1px);
+}
+
+.social-button.gmail {
+  border-color: rgba(15, 15, 15, 0.22);
+  color: var(--color-text);
+}
+.social-button.gmail:hover {
+  background: var(--color-surface-alt);
+}
+
+.social-button.outlook {
+  border-color: rgba(15, 15, 15, 0.22);
+  color: var(--color-text);
+}
+
+.social-button.outlook:hover {
+  background: var(--color-surface-alt);
+}
+
+.social-button.linkedin {
+  border-color: rgba(15, 15, 15, 0.22);
+  color: var(--color-text);
+}
+
+.social-button.linkedin:hover {
+  background: var(--color-surface-alt);
+}
+
+.social-button.itch {
+  border-color: rgba(15, 15, 15, 0.22);
+  color: var(--color-text);
+}
+
+.social-button.itch:hover {
+  background: var(--color-surface-alt);
+}
+
+.contact-hint {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.contact-hint a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.contact-hint a:hover {
+  text-decoration: underline;
+}
+
+.contact-status {
+  font-weight: 600;
+}
+
+.contact-status--success {
+  color: var(--color-success-text, #166534);
+  border-left: 3px solid var(--color-success, #16a34a);
+  background: var(--color-success-bg, #f0fdf4);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.contact-status--error {
+  color: var(--color-error-text, #991b1b);
+  border-left: 3px solid var(--color-error, #dc2626);
+  background: var(--color-error-bg, #fef2f2);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-sm);
+}
+
+.contact-status--info {
+  color: var(--color-text-secondary);
+  border-left: 3px solid rgba(31, 58, 138, 0.35);
+  padding-left: var(--space-3);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .form-actions button,
+  .form-actions .social-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

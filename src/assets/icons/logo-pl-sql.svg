@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- Transparent background; PL badge + bold SQL for clarity -->
+  <g>
+    <rect x="38" y="6" width="20" height="12" rx="6" ry="6" fill="#111"/>
+    <text x="48" y="15" text-anchor="middle" font-size="10" font-family="Segoe UI, Arial, Helvetica, sans-serif" fill="#fff" font-weight="800">PL</text>
+  </g>
+  <text x="32" y="44" text-anchor="middle" font-size="30" font-family="Segoe UI, Arial, Helvetica, sans-serif" fill="#111" font-weight="800">SQL</text>
+</svg>

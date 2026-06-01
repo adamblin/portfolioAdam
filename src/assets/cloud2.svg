@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="420" height="160" viewBox="0 0 420 160" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="rgba(15,23,42,0.12)"/>
+    </filter>
+    <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.98)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.88)"/>
+    </linearGradient>
+  </defs>
+  <g filter="url(#shadow)">
+    <ellipse cx="130" cy="90" rx="78" ry="48" fill="url(#glass)"/>
+    <ellipse cx="200" cy="74" rx="92" ry="58" fill="url(#glass)"/>
+    <ellipse cx="270" cy="96" rx="82" ry="50" fill="url(#glass)"/>
+    <rect x="96" y="102" width="220" height="42" rx="21" fill="url(#glass)"/>
+  </g>
+</svg>
