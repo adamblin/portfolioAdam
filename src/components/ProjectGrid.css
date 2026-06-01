@@ -14,7 +14,7 @@
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: clamp(28px, 4vw, 52px);
+  gap: clamp(48px, 7vw, 92px);
   counter-reset: project-count;
 }
 
@@ -44,6 +44,10 @@
 @media (max-width: 768px) {
   .projects-grid {
     gap: var(--space-lg);
+  }
+
+  .projects-list {
+    gap: clamp(34px, 10vw, 56px);
   }
 }
 

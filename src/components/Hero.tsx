@@ -1,6 +1,22 @@
 import './Hero.css';
+import type { MouseEvent } from 'react';
 
 export default function Hero() {
+  const scrollToSection = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const navbarHeight = document.querySelector('.navbar')?.getBoundingClientRect().height ?? 0;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+    window.history.pushState(null, '', `#${id}`);
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <section className="hero" id="hero" aria-label="Introduction">
       <div className="hero-content">
@@ -21,7 +37,11 @@ export default function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a href="#projects" className="hero-btn hero-btn--primary">
+          <a
+            href="#projects"
+            className="hero-btn hero-btn--primary"
+            onClick={(event) => scrollToSection(event, 'projects')}
+          >
             View Projects
             <svg
               aria-hidden="true"
@@ -38,7 +58,11 @@ export default function Hero() {
               <polyline points="19 12 12 19 5 12" />
             </svg>
           </a>
-          <a href="#contact" className="hero-btn hero-btn--secondary">
+          <a
+            href="#contact"
+            className="hero-btn hero-btn--secondary"
+            onClick={(event) => scrollToSection(event, 'contact')}
+          >
             Get in touch
           </a>
         </div>
@@ -73,7 +97,12 @@ export default function Hero() {
         </div>
       </div>
 
-      <a className="hero-scroll-hint" href="#projects" aria-label="Scroll to projects">
+      <a
+        className="hero-scroll-hint"
+        href="#projects"
+        aria-label="Scroll to projects"
+        onClick={(event) => scrollToSection(event, 'projects')}
+      >
         <svg
           aria-hidden="true"
           width="20"

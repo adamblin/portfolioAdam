@@ -1,6 +1,7 @@
 .section {
   padding: 0 var(--section-pad-x);
   min-height: calc(100dvh - var(--navbar-height));
+  scroll-margin-top: var(--navbar-height);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -173,7 +174,7 @@
   border-bottom: 1px solid rgba(64, 113, 232, 0.08);
   box-shadow: none;
   max-width: 100%;
-  --section-edge-space: clamp(40px, 5.5vw, 64px);
+  --section-edge-space: clamp(48px, 6vw, 76px);
   padding-inline: clamp(32px, 4vw, 64px);
 }
 
@@ -210,14 +211,13 @@
   --section-accent-2: 95, 104, 220;
   padding-inline: clamp(18px, 2.5vw, 36px);
   min-height: calc(100dvh - var(--navbar-height));
+  padding-block: clamp(28px, 4vw, 48px);
 }
 #about .section-inner {
   background: linear-gradient(180deg, #203f89 0%, #153066 100%);
-  --section-edge-space: clamp(28px, 3.8vw, 42px);
-  min-height: calc(100dvh - var(--navbar-height));
-  display: grid;
-  grid-template-rows: auto 1fr;
-  align-content: start;
+  --section-edge-space: clamp(20px, 3vw, 32px);
+  min-height: auto;
+  display: flex;
 }
 
 #contact.section {
@@ -244,6 +244,13 @@
 
 #stack.section {
   background: linear-gradient(180deg, #223f8c 0%, #17336f 50%, #112552 100%);
+  min-height: calc(100dvh - var(--navbar-height));
+}
+
+#stack .section-inner {
+  min-height: calc(100dvh - var(--navbar-height));
+  --section-edge-space: clamp(40px, 5vw, 64px);
+  gap: clamp(22px, 3vw, 40px);
 }
 
 #projects.section::before,

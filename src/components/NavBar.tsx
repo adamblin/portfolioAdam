@@ -1,4 +1,5 @@
 import './NavBar.css';
+import type { MouseEvent } from 'react';
 import { useEffect, useMemo, useRef, useState } from 'react';
 
 type Item = { id: string; label: string };
@@ -88,6 +89,22 @@ export default function NavBar() {
     });
   }, [active]);
 
+  const handleNavClick = (event: MouseEvent<HTMLAnchorElement>, id: string) => {
+    event.preventDefault();
+    const target = document.getElementById(id);
+    if (!target) return;
+
+    const navbarHeight = navRef.current?.closest('.navbar')?.getBoundingClientRect().height ?? 0;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+    setActive(id);
+    window.history.pushState(null, '', `#${id}`);
+    window.scrollTo({
+      top: Math.max(0, targetTop),
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header className="navbar">
       <a href="#hero" className="navbar-brand" aria-label="Go to top">
@@ -103,7 +120,7 @@ export default function NavBar() {
             href={`#${item.id}`}
             className={`nav-link${active === item.id ? ' active' : ''}`}
             aria-current={active === item.id ? 'page' : undefined}
-            onClick={() => setActive(item.id)}
+            onClick={(event) => handleNavClick(event, item.id)}
           >
             {item.label}
           </a>
