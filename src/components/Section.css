@@ -276,6 +276,7 @@
     gap: var(--space-lg);
     border-radius: var(--radius-xl);
     padding: var(--space-md);
+    min-height: auto;
   }
 
   /* Band sections: no padding at any breakpoint — the band fills edge-to-edge */
@@ -291,6 +292,16 @@
   #projects .section-inner,
   #contact .section-inner {
     border-radius: 0;
+    min-height: auto;
+  }
+
+  /* Fix padding-inline specificity: #projects overrides the generic rule above */
+  #projects .section-inner {
+    padding-inline: var(--space-md);
+  }
+
+  .section-inner--open .section-title {
+    white-space: normal;
   }
 
   .section-inner.section-inner--full {

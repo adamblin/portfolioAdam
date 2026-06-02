@@ -102,13 +102,17 @@
     text-align: left;
     padding-bottom: var(--card-gap);
   }
-  
+
+  .about-photo-col {
+    order: -1;
+  }
+
   .about-photo {
-    width: 136px;
-    height: 136px;
+    width: 100px;
+    height: 100px;
     margin: 0 auto;
   }
-  
+
   .about-text {
     align-items: flex-start;
   }
