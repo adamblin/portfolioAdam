@@ -270,6 +270,7 @@
 @media (max-width: 768px) {
   .section {
     padding: var(--space-lg) var(--space-md);
+    min-height: 0; /* Allow content-tall sections (projects, experience) to grow beyond viewport */
   }
 
   .section-inner {
@@ -277,6 +278,7 @@
     border-radius: var(--radius-xl);
     padding: var(--space-md);
     min-height: auto;
+    flex-basis: auto; /* Override flex:1's flex-basis:0 so section-inner starts at content height */
   }
 
   /* Band sections: no padding at any breakpoint — the band fills edge-to-edge */
