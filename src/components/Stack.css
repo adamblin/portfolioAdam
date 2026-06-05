@@ -183,6 +183,10 @@
     min-height: auto;
   }
 
+  .stack-columns {
+    gap: clamp(28px, 4vw, 52px);
+  }
+
   .stack-panel-head {
     flex-direction: row;
     justify-content: flex-start;

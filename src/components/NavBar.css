@@ -96,31 +96,34 @@
 /* Mobile responsive */
 @media (max-width: 640px) {
   :root {
-    --navbar-height: 64px;
+    --navbar-height: 60px;
   }
 
   .navbar {
     padding-inline: var(--space-3);
     gap: var(--space-2);
+    justify-content: flex-start;
   }
 
   .nav {
     flex: 1;
     min-width: 0;
+    max-width: none;
     justify-content: flex-start;
     gap: var(--space-1);
-    padding: var(--space-1);
+    padding: var(--space-1) var(--space-2);
     overflow-x: auto;
     overscroll-behavior-inline: contain;
     scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
-    border: none;
-    background: transparent;
+    border: 1px solid rgba(20, 24, 34, 0.1);
+    background: rgba(255, 255, 255, 0.75);
     box-shadow: none;
+    border-radius: var(--radius-full);
     /* Fade edges to hint at scrollability without hard clip */
-    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12px, black calc(100% - 12px), transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0%, black 12px, black calc(100% - 12px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 16px, black calc(100% - 16px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, black 16px, black calc(100% - 16px), transparent 100%);
   }
 
   .nav::-webkit-scrollbar {
@@ -138,9 +141,9 @@
 
 @media (max-width: 400px) {
   .nav-link {
-    font-size: 0.75rem;
-    padding: 10px 8px;
-    min-height: 44px;
+    font-size: 0.72rem;
+    padding: 8px 7px;
+    min-height: 40px;
     display: inline-flex;
     align-items: center;
   }

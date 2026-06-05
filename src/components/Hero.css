@@ -261,4 +261,19 @@
   .hero-btn {
     justify-content: center;
   }
+
+  .hero-tagline {
+    max-width: 100%;
+    font-size: clamp(0.875rem, 3.8vw, 1rem);
+  }
+
+  .hero-roles {
+    font-size: clamp(0.9375rem, 4vw, 1.15rem);
+  }
+}
+
+@media (max-width: 360px) {
+  .hero-name {
+    font-size: clamp(3.5rem, 15vw, 4.5rem);
+  }
 }
