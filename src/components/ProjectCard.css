@@ -351,7 +351,7 @@
 @media (max-width: 900px) {
   .project-card.border {
     max-width: 100%;
-    padding: clamp(16px, 3vw, 22px);
+    padding: clamp(14px, 3vw, 22px);
   }
 
   .project-card.border .card-grid {
@@ -369,19 +369,44 @@
 }
 
 /* ── Mobile ── */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .project-card.border {
+    padding: 14px;
+    border-radius: var(--radius-lg);
+  }
+
+  .project-card.border .title {
+    font-size: clamp(1.2rem, 5.5vw, 1.5rem);
+  }
+
+  .project-card.border .description {
+    font-size: 0.875rem;
+    max-width: 100%;
+  }
+
+  .project-card.border .description--result {
+    max-width: 100%;
+  }
+
+  .project-card.border .visual {
+    min-height: clamp(160px, 50vw, 220px);
+  }
+
   .project-card.border .actions {
     flex-direction: column;
   }
 
+  .project-card.border .actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
   .project-card.border .stack-items {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: var(--space-2);
-    -webkit-overflow-scrolling: touch;
+    flex-wrap: wrap;
+    gap: var(--space-1) var(--space-2);
   }
 
   .project-card.border .skill-pill {
-    flex-shrink: 0;
+    font-size: 0.7rem;
   }
 }
